@@ -1,6 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Recipes.css';
+import '../css/Recipes.css';
 
 const Recipes = () => {
     const recipes = [

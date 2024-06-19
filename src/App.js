@@ -4,7 +4,6 @@ import Home from './Components/Home';
 import Navbar from './Components/Navbar';
 import Recipes from './Components/Recipes';
 import './App.css';
-import './Components/Navbar.css';
 import './Components/Login';
 
 function App() {

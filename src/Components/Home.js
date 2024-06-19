@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
-import "./Home.css";
+import "../css/Home.css";
 
 const Home = () => {
   const recipes = [
