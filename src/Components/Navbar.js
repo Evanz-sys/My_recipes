@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../css/Navbar.css'; 
+import '../css/Navbar.css';
 
 const Navbar = () => {
   return (
@@ -16,20 +16,19 @@ const Navbar = () => {
               <Link to="/" className="nav-link">Inicio</Link>
             </li>
             <li className="nav-item">
-              <Link to="/recipes" className="nav-link">Recetas</Link>
+              <Link to="/Recipe" className="nav-link">Recetas</Link>
             </li>
             <li className="nav-item">
-              <Link to="/Share" className="nav-link">Compartir Recetas</Link>
+              <Link to="/Shared" className="nav-link">Compartir Recetas</Link>
             </li>
             <li className="nav-item">
-              <Link to="/Share" className="nav-link">iniciar sesion</Link>
+              <Link to="/login" className="nav-link">Iniciar Sesión</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/profile" className="nav-link">Perfil</Link>
             </li>
           </ul>
         </div>
-        <form className="d-flex">
-          <input className="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar" />
-          <button className="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
       </div>
     </nav>
   );

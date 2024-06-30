@@ -18,6 +18,7 @@ const Home = () => {
           <h1>Cocina de Mercado</h1>
         </div>
       </div>
+      
       <p>¡Guarda tus recetas favoritas y compartelas!.</p>
 
       <Carousel>
