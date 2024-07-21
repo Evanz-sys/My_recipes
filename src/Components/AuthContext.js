@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 
+
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
@@ -9,14 +10,19 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/verify', {
+        const response = await fetch('http://localhost:5000/api/verify', { withCredentials: true } ,{
           method: 'GET',
           credentials: 'include',
         });
         if (response.ok) {
           const userData = await response.json();
           login(userData);
+        } 
+        else {
+          setIsAuthenticated(false);
+          setUser(null);
         }
+        
       } catch (error) {
         console.error('Error verifying token:', error);
       }
