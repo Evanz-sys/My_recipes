@@ -1,0 +1,89 @@
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 70px;
+  background-color: hsl(160, 39%, 53%);
+  border: 2px solid  rgba(255,255,255, 0.2);  
+  background-image: url('/public/HomePage.jpg');
+  background-size: cover;
+}
+
+.card {
+  box-shadow: 0 0 20px rgba(73, 11, 11, 0.1);
+  background-color: #5dc9a5;
+  padding: 20px;
+  border-radius: 5px;
+  height: 350px;
+  text-align: center;
+  font-family:Verdana, 'Geneva', Tahoma, sans-serif;
+  font-style:italic;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  font-family:Verdana, 'Geneva', Tahoma, sans-serif;
+  font-style:italic;
+  width: 100px;
+  height: 50px;
+  
+}
+input[type="username"],
+input[type="email"],
+input[type="password"] {
+  width: 65%;
+  padding: 3px;
+  border-radius: 30px;
+  background-color: transparent;
+  color: #050000;
+   
+}
+
+
+.btn-primary {
+  margin-top: 15px;
+  background-color: #52cba3;
+  border-color: #52cba3;
+  color: #0a0808;
+  padding: 0.5rem 5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-style:italic;
+}
+
+.btn-primary:hover {
+  background-color: #4fb375;
+  border-color: #020605;
+  
+}
+
+.link-primary {
+  padding: 10px;
+  text-decoration: none;
+  color: #258867;
+  
+  font-family:Verdana, 'Geneva', Tahoma, sans-serif;
+}
+
+.link-primary:hover {
+  text-decoration: none;
+  color: #53635e;
+  
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  padding: 0.75rem 1.25rem;
+  margin-top: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.alert-danger strong {
+  font-weight: bold;
+}
