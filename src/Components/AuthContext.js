@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = async () => {
     try {
-      const response = await fetch('https://recipe-api-4kqf.onrender.com//api/logout', {
+      const response = await fetch('https://recipe-api-4kqf.onrender.com/api/logout', {
         method: 'POST',
         credentials: 'include',
       });
