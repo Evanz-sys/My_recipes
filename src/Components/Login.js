@@ -19,7 +19,7 @@ const Login = () => {
     try {
       let endpoint = isRegistering ? '/api/register' : '/api/login';
       const body = isRegistering ? { username, email, password } : { email, password };
-      const response = await fetch(`http://localhost:5000${endpoint}`, {
+      const response = await fetch(`https://recipe-api-4kqf.onrender.com${endpoint}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

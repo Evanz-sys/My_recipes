@@ -14,7 +14,7 @@ const RecipeDetail = () => {
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/Recipe/${id}`);
+        const response = await axios.get(`https://recipe-api-4kqf.onrender.com/api/Recipe/${id}`);
         setRecipe(response.data);
       } catch (error) {
         console.error('Error fetching recipe:', error);
@@ -35,7 +35,7 @@ const RecipeDetail = () => {
   const submitComment = async () => {
     try {
       const commentData = { ...newComment, user: user.username };
-      const response = await axios.post(`http://localhost:5000/api/Recipe/${id}/comments`, commentData, {
+      const response = await axios.post(`https://recipe-api-4kqf.onrender.com/api/Recipe/${id}/comments`, commentData, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }

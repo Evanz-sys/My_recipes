@@ -20,7 +20,7 @@ const App = () => {
 
   const getData = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api');
+      const response = await axios.get('https://recipe-api-4kqf.onrender.com/api');
       setData(response.data);
     } catch (error) {
       console.error('Error fetching data:', error);

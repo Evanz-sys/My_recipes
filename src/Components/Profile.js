@@ -19,7 +19,7 @@ const Profile = ({ userId }) => {
                     console.error('No token found');
                     return;
                 }
-                const response = await axios.get(`http://localhost:5000/api/Recipe/user/${userId}/recipes`, {
+                const response = await axios.get(`https://recipe-api-4kqf.onrender.com/api/Recipe/user/${userId}/recipes`, {
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }
@@ -41,7 +41,7 @@ const Profile = ({ userId }) => {
     const handleUpdateRecipe = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.put(`http://localhost:5000/api/Recipe/user/${userId}/recipes/${editRecipe._id}`, editRecipe, {
+            const response = await axios.put(`https://recipe-api-4kqf.onrender.com/api/Recipe/user/${userId}/recipes/${editRecipe._id}`, editRecipe, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -63,7 +63,7 @@ const Profile = ({ userId }) => {
         if (window.confirm("¿Estás seguro de eliminar esta receta?")) {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.delete(`http://localhost:5000/api/Recipe/user/${userId}/recipes/${_id}`, {
+                const response = await axios.delete(`https://recipe-api-4kqf.onrender.com/api/Recipe/user/${userId}/recipes/${_id}`, {
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }

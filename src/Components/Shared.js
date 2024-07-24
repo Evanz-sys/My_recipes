@@ -42,7 +42,7 @@ const Shared = () => {
                 throw new Error('Token no encontrado');
             }
 
-            const response = await axios.post('http://localhost:5000/api/Recipe', formData, {
+            const response = await axios.post('https://recipe-api-4kqf.onrender.com/api/Recipe', formData, {
                 headers: {
                     'Authorization': `Bearer ${Token}`,
                     'Content-Type': 'multipart/form-data',

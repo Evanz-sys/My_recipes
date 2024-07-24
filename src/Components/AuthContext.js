@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/verify',{
+        const response = await fetch('https://recipe-api-4kqf.onrender.com/api/verify',{
           method: 'GET',
           credentials: 'include',
         });
@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/logout', {
+      const response = await fetch('https://recipe-api-4kqf.onrender.com//api/logout', {
         method: 'POST',
         credentials: 'include',
       });
