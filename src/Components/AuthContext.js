@@ -12,7 +12,10 @@ export const AuthProvider = ({ children }) => {
       try {
         const response = await fetch('https://recipe-api-4kqf.onrender.com/api/verify',{
           method: 'GET',
-          credentials: 'include',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          credentials: 'include'
         });
         if (response.ok) {
           const userData = await response.json();
