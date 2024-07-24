@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import "../css/Profiler.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Profile = ({ userId }) => {

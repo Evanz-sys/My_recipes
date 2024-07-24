@@ -1,55 +1,95 @@
+/* Contenedor principal */
 .container {
-    margin-top: 2rem;
+  margin-top: 2rem;
+  padding: 0 1rem; /* Agrega padding para dispositivos móviles */
+}
+
+/* Título principal */
+h2 {
+  font-size: 1.5rem; /* Ajusta el tamaño de fuente para pantallas más pequeñas */
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: monospace;
+}
+
+/* Contenedor de imagen */
+.img-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Imagen */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border: 5px solid #13f164;
+}
+
+/* Párrafos */
+p {
+  font-size: 1rem; /* Ajusta el tamaño de fuente para mejorar la legibilidad en móviles */
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Contenedor de comentarios */
+.comments-container {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #807f7f;
+  border: 3px solid #13f164;
+  border-radius: 0.5rem;
+}
+
+/* Comentarios individuales */
+.comment {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+/* El último comentario no tiene borde inferior */
+.comment:last-child {
+  border-bottom: none;
+}
+
+/* Párrafos dentro de comentarios */
+.comment p {
+  margin-bottom: 0.2rem;
+}
+
+/* Texto en negrita dentro de comentarios */
+.comment strong {
+  font-weight: bold;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .container {
+      padding: 0 0.5rem; /* Ajusta el padding para pantallas más pequeñas */
   }
-  
+
   h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    font-family: monospace;
+      font-size: 1.25rem; /* Ajusta el tamaño del título para pantallas más pequeñas */
   }
-  
-  .img-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-  }
-  
-  .img-fluid {
-    max-width: 100%;
-    height: auto;
-    border: 5px solid #13f164;
-  }
-  
+
   p {
-    font-size: 0.8rem;
-    line-height: 1;
-    margin-bottom: 2rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 0.9rem; /* Ajusta el tamaño de fuente para párrafos en pantallas más pequeñas */
   }
-  
-  .comments-container {
-    margin-top: 2rem;
-    padding: 1rem;
-    background-color: #807f7f;
-    border: 3px solid #13f164;
-    border-radius: 0.5rem;
+}
+
+@media (max-width: 576px) {
+  h2 {
+      font-size: 1rem; /* Ajusta el tamaño del título para pantallas más pequeñas */
   }
-  
+
+  p {
+      font-size: 0.8rem; /* Ajusta el tamaño de fuente para párrafos en pantallas más pequeñas */
+  }
+
   .comment {
-    padding: 0.5rem;
-    border-bottom: 1px solid #ddd;
+      padding: 0.5rem;
+      font-size: 0.8rem; /* Ajusta el tamaño de fuente en los comentarios */
   }
-  
-  .comment:last-child {
-    border-bottom: none;
-  }
-  
-  .comment p {
-    margin-bottom: 0.2rem;
-  }
-  
-  .comment strong {
-    font-weight: bold;
-  }
-  
+}

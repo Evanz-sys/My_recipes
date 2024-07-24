@@ -1,0 +1,131 @@
+/* Contenedor principal */
+.container {
+    margin-top: 2rem;
+    padding: 0 15px;
+}
+
+/* Título del perfil */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Tarjetas de recetas */
+.user-recipes {
+    margin-bottom: 2rem;
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.card-body {
+    padding: 15px;
+    text-align: left;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.btn-primary, .btn-danger {
+    margin-right: 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* Formulario de edición de recetas */
+.edit-recipe-form {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.edit-recipe-form h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-success, .btn-secondary {
+    margin-top: 1rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 10px;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    .card-text {
+        font-size: 0.85rem;
+    }
+
+    .form-control {
+        font-size: 0.875rem;
+    }
+
+    .btn-primary, .btn-danger, .btn-success, .btn-secondary {
+        font-size: 0.75rem;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.75rem;
+    }
+
+    .edit-recipe-form {
+        padding: 0.5rem;
+    }
+
+    .form-control {
+        font-size: 0.75rem;
+        padding: 8px;
+    }
+
+    .btn-primary, .btn-danger, .btn-success, .btn-secondary {
+        font-size: 0.65rem;
+        padding: 6px 10px;
+    }
+}

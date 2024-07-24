@@ -1,7 +1,8 @@
+/* Asegúrate de que el contenedor de la imagen de fondo y su contenido se adapten bien a dispositivos móviles */
 .background-container {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 300px; /* Cambiado a una altura más pequeña para dispositivos móviles */
 }
 
 .background-image {
@@ -18,49 +19,117 @@
   color: white;
   text-shadow: 1px 1px 2px black;
   text-align: center;
+  padding: 0 10px; /* Añadido padding para espacio en pantallas más pequeñas */
 }
 
+/* Ajustes para el texto */
+h1 {
+  text-align: center;
+  color: #343a40;
+  margin-bottom: 1rem;
+  font-family: fantasy;
+  font-size: 1.5rem; /* Tamaño reducido para pantallas pequeñas */
+}
 
-.container {
-    margin-top: 2rem;
+p {
+  text-align: center;
+  font-size: 1.2rem; /* Tamaño reducido para pantallas pequeñas */
+  color: #6c757d;
+  font-family: fantasy;
+}
+
+/* Ajustes para el carrusel */
+.carousel .carousel-item {
+  max-height: 400px; /* Tamaño reducido para pantallas pequeñas */
+}
+
+.carousel .carousel-item img {
+  object-fit: cover;
+  height: 100%;
+}
+
+/* Ajustes para las leyendas del carrusel */
+.carousel .carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem; /* Menos padding para pantallas pequeñas */
+  border-radius: 5px;
+}
+
+.carousel .carousel-caption h3 {
+  color: #fff;
+  font-size: 1.5rem; /* Tamaño reducido para pantallas pequeñas */
+}
+
+.carousel .carousel-caption p {
+  color: #fff;
+  font-size: 1rem; /* Tamaño reducido para pantallas pequeñas */
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .background-container {
+    height: 200px;
+  }
+  
+  .background-content {
+    padding: 0 5px;
   }
   
   h1 {
-    text-align: center;
-    color: #343a40;
-    margin-bottom: 1rem;
-    font-family: fantasy;
-  }
-  
-  p {
-    text-align: center;
-    font-size: 1.5rem;
-    color: #6c757d;
-    font-family: fantasy;
-  }
-  
-  .carousel .carousel-item {
-    max-height: 500px;
-  }
-  
-  .carousel .carousel-item img {
-    object-fit: cover;
-    height: 500px;
-  }
-  
-  .carousel .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 1rem;
-    border-radius: 5px;
-  }
-  
-  .carousel .carousel-caption h3 {
-    color: #fff;
-    font-size: 2rem;
-  }
-  
-  .carousel .carousel-caption p {
-    color: #fff;
     font-size: 1.2rem;
   }
   
+  p {
+    font-size: 1rem;
+  }
+  
+  .carousel .carousel-item {
+    max-height: 300px;
+  }
+  
+  .carousel .carousel-caption {
+    padding: 0.3rem;
+  }
+  
+  .carousel .carousel-caption h3 {
+    font-size: 1.2rem;
+  }
+  
+  .carousel .carousel-caption p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .background-container {
+    height: 150px;
+  }
+  
+  .background-content {
+    font-size: 0.9rem;
+  }
+  
+  h1 {
+    font-size: 1rem;
+  }
+  
+  p {
+    font-size: 0.9rem;
+  }
+  
+  .carousel .carousel-item {
+    max-height: 200px;
+  }
+  
+  .carousel .carousel-caption {
+    padding: 0.2rem;
+  }
+  
+  .carousel .carousel-caption h3 {
+    font-size: 1rem;
+  }
+  
+  .carousel .carousel-caption p {
+    font-size: 0.7rem;
+  }
+}

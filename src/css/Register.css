@@ -1,79 +1,90 @@
+/* Contenedor principal */
 .container {
   max-width: 600px;
   margin: auto;
-  padding: 70px;
+  padding: 2rem;
   background-color: hsl(160, 39%, 53%);
-  border: 2px solid  rgba(255,255,255, 0.2);  
+  border: 2px solid rgba(255, 255, 255, 0.2);
   background-image: url('/public/HomePage.jpg');
   background-size: cover;
+  border-radius: 10px;
 }
 
+/* Tarjeta del formulario */
 .card {
   box-shadow: 0 0 20px rgba(73, 11, 11, 0.1);
   background-color: #5dc9a5;
-  padding: 20px;
-  border-radius: 5px;
-  height: 350px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  height: auto; /* Ajusta la altura para el contenido */
   text-align: center;
-  font-family:Verdana, 'Geneva', Tahoma, sans-serif;
-  font-style:italic;
+  font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+  font-style: italic;
+  margin-bottom: 1rem;
 }
 
+/* Título del formulario */
 .card-title {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
+/* Etiquetas del formulario */
 .form-label {
-  font-family:Verdana, 'Geneva', Tahoma, sans-serif;
-  font-style:italic;
-  width: 100px;
-  height: 50px;
-  
+  font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+  font-style: italic;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  display: block;
 }
-input[type="username"],
+
+/* Campos de entrada */
+input[type="text"],
 input[type="email"],
 input[type="password"] {
-  width: 65%;
-  padding: 3px;
+  width: calc(100% - 30px); /* Ajusta el ancho teniendo en cuenta el padding */
+  padding: 10px;
   border-radius: 30px;
   background-color: transparent;
   color: #050000;
-   
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
-
+/* Botón de envío */
 .btn-primary {
-  margin-top: 15px;
+  margin-top: 1rem;
   background-color: #52cba3;
   border-color: #52cba3;
   color: #0a0808;
-  padding: 0.5rem 5rem;
+  padding: 0.5rem 2rem;
   border-radius: 50px;
   cursor: pointer;
-  font-style:italic;
+  font-style: italic;
+  font-size: 1rem;
 }
 
+/* Estilo del botón en hover */
 .btn-primary:hover {
   background-color: #4fb375;
   border-color: #020605;
-  
 }
 
+/* Enlace primario */
 .link-primary {
   padding: 10px;
   text-decoration: none;
   color: #258867;
-  
-  font-family:Verdana, 'Geneva', Tahoma, sans-serif;
+  font-family: Verdana, 'Geneva', Tahoma, sans-serif;
 }
 
+/* Estilo del enlace en hover */
 .link-primary:hover {
   text-decoration: none;
   color: #53635e;
-  
 }
 
+/* Alerta de error */
 .alert-danger {
   color: #721c24;
   background-color: #f8d7da;
@@ -84,6 +95,55 @@ input[type="password"] {
   border-radius: 0.25rem;
 }
 
+/* Estilo en negrita dentro de la alerta */
 .alert-danger strong {
-  font-weight: bold;
+  font-weight: bold;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .container {
+      padding: 1.5rem;
+  }
+
+  .card {
+      padding: 1rem;
+  }
+
+  .card-title {
+      font-size: 1.25rem;
+  }
+
+  .form-control {
+      font-size: 0.875rem;
+  }
+
+  .btn-primary {
+      padding: 0.5rem 1.5rem;
+      font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+      padding: 1rem;
+  }
+
+  .card {
+      padding: 0.5rem;
+  }
+
+  .card-title {
+      font-size: 1.1rem;
+  }
+
+  .form-control {
+      font-size: 0.75rem;
+      padding: 8px;
+  }
+
+  .btn-primary {
+      padding: 0.5rem 1rem;
+      font-size: 0.75rem;
+  }
 }

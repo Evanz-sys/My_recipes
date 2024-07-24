@@ -1,79 +1,89 @@
+/* Estilos generales del contenedor */
 .container {
-  max-width: 600px;
+  max-width: 100%;
   margin: auto;
-  padding: 70px;
+  padding: 20px; /* Reducido padding para pantallas pequeñas */
   background-color: hsl(160, 39%, 53%);
-  border: 2px solid  rgba(255,255,255, 0.2);  
+  border: 2px solid rgba(255, 255, 255, 0.2);
   background-image: url('/public/HomePage.jpg');
   background-size: cover;
+  background-position: center; /* Asegura que la imagen se centre */
 }
 
+/* Estilos de la tarjeta de formulario */
 .card {
   box-shadow: 0 0 20px rgba(73, 11, 11, 0.1);
   background-color: #5dc9a5;
   padding: 20px;
   border-radius: 5px;
-  height: 350px;
   text-align: center;
-  font-family:Verdana, 'Geneva', Tahoma, sans-serif;
-  font-style:italic;
+  font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+  font-style: italic;
+  margin: auto;
 }
 
+/* Títulos de la tarjeta */
 .card-title {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
+/* Etiquetas de los formularios */
 .form-label {
-  font-family:Verdana, 'Geneva', Tahoma, sans-serif;
-  font-style:italic;
-  width: 100px;
-  height: 50px;
-  
+  font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+  font-style: italic;
+  display: block;
+  margin-bottom: 0.5rem;
 }
+
+/* Estilos de los campos de entrada */
 input[type="username"],
 input[type="email"],
 input[type="password"] {
-  width: 65%;
-  padding: 3px;
+  width: 100%; /* Asegura que los campos llenen el contenedor */
+  max-width: 400px; /* Limita el ancho máximo */
+  padding: 10px;
   border-radius: 30px;
   background-color: transparent;
   color: #050000;
-   
+  margin-bottom: 1rem; /* Añade espacio entre los campos */
 }
 
-
+/* Botón primario */
 .btn-primary {
   margin-top: 15px;
   background-color: #52cba3;
   border-color: #52cba3;
   color: #0a0808;
-  padding: 0.5rem 5rem;
+  padding: 0.5rem 2rem; /* Reducido padding para mejor adaptación */
   border-radius: 50px;
   cursor: pointer;
-  font-style:italic;
+  font-style: italic;
+  display: inline-block; /* Asegura que el botón se alinee bien */
 }
 
+/* Hover del botón primario */
 .btn-primary:hover {
   background-color: #4fb375;
   border-color: #020605;
-  
 }
 
+/* Enlace primario */
 .link-primary {
+  display: block;
   padding: 10px;
   text-decoration: none;
   color: #258867;
-  
-  font-family:Verdana, 'Geneva', Tahoma, sans-serif;
+  font-family: Verdana, 'Geneva', Tahoma, sans-serif;
 }
 
+/* Hover del enlace primario */
 .link-primary:hover {
   text-decoration: none;
   color: #53635e;
-  
 }
 
+/* Mensajes de alerta */
 .alert-danger {
   color: #721c24;
   background-color: #f8d7da;
@@ -84,6 +94,39 @@ input[type="password"] {
   border-radius: 0.25rem;
 }
 
-.alert-danger strong {
-  font-weight: bold;
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+  
+  .card {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+  }
+  
+  .btn-primary {
+    padding: 0.5rem 1.5rem; /* Reducido padding para pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .card {
+    padding: 10px;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+  }
+  
+  .btn-primary {
+    padding: 0.5rem 1rem; /* Reducido padding para pantallas más pequeñas */
+  }
 }
